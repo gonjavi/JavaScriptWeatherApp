@@ -1,0 +1,29 @@
+{
+  "name": "JavaScriptWeatherApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonjavi/JavaScriptWeatherApp.git"
+  },
+  "keywords": [],
+  "author": "Gonzalo Javier Mancilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gonjavi/JavaScriptWeatherApp/issues"
+  },
+  "homepage": "https://github.com/gonjavi/JavaScriptWeatherApp#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}
