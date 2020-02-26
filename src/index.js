@@ -23,6 +23,12 @@ document.getElementById('check').onclick = () => {
   tr1.appendChild(th2);
   tr1.appendChild(th3);
   thead.appendChild(tr1);
+  if (titlediv.hasChildNodes()) {
+    titlediv.removeChild(titlediv.childNodes[0]);
+  }
+  if (table.hasChildNodes()) {
+    table.removeChild(table.childNodes[0]);
+  }
   titlediv.appendChild(title);
   table.appendChild(thead);
   return false;
