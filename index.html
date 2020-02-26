@@ -16,30 +16,16 @@
       <div class="col-4"></div>
       <div class="col-4">
         <form>
-          <h3>Type City to Get Temperature</h3>
+          <h3>Type the City to Get Temperature</h3>
           <div class="form-group">
-            <label for="exampleInputEmail1">City</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="City">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" placeholder="City">
           </div>
-          <button type="submit" class="btn btn-warning">Check</button>
+          <button type="submit" class="btn btn-warning" id="check">Check</button>
         </form>
-
-        <table class="table m-4">
-          <h3>Temperature</h3>
-            <thead>
-              <tr>
-                <th>City</th>
-                <th>Celsius</th>
-                <th>Fahrenheit</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-          </table>
+        <table id="titlediv"></table>
+        <table class=table m-4"" id="table">
+        </table>
       </div>
     </main>
     <script src="main.js"></script>
