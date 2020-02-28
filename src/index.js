@@ -1,35 +1,42 @@
-import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+const notice = document.getElementById('notice');
+
+async function getTemperature(city) {
+  const apiKey = process.env.API_KEY;
+  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`, { mode: 'cors' });
+  const weatherInfo = await response.json();
+  if (weatherInfo.name === undefined) {
+    notice.innerHTML = 'Please check the spelling of the city:\n';
+    setTimeout(() => {
+      document.location.reload();
+    }, 4000);
+  }
+  document.getElementById('one').innerHTML = `${weatherInfo.name}`;
+  document.getElementById('two').innerHTML = `${Math.floor(weatherInfo.main.temp - (273.15))}`;
+  document.getElementById('three').innerHTML = `${Math.floor(((weatherInfo.main.temp - (273.15)) * (1.8)) + 32)}`;
+  return false;
+}
+
 document.getElementById('check').onclick = () => {
-  const table = document.getElementById('table');
+  const city = document.getElementById('city').value;
+  let ok = true;
+  if (city === '') {
+    ok = false;
+  }
+  if (ok === false) {
+    notice.innerHTML = 'Please enter the city name:\n';
+    return ok;
+  }
   const titlediv = document.getElementById('titlediv');
   const title = document.createElement('h3');
-  const thead = document.createElement('thead');
-  const tr1 = document.createElement('tr');
-  const th1 = document.createElement('th');
-  const th2 = document.createElement('th');
-  const th3 = document.createElement('th');
-  const tbody = document.createElement('tbody');
-  const tr2 = document.createElement('tr');
-  const td1 = document.createElement('td');
-  const td2 = document.createElement('td');
-  const td3 = document.createElement('td');
   title.innerHTML = 'Temperature';
-  th1.innerHTML = 'City';
-  th2.innerHTML = 'Celsius';
-  th3.innerHTML = 'Fahrenheit';
-  tr1.appendChild(th1);
-  tr1.appendChild(th2);
-  tr1.appendChild(th3);
-  thead.appendChild(tr1);
   if (titlediv.hasChildNodes()) {
     titlediv.removeChild(titlediv.childNodes[0]);
   }
-  if (table.hasChildNodes()) {
-    table.removeChild(table.childNodes[0]);
-  }
   titlediv.appendChild(title);
-  table.appendChild(thead);
+
+  getTemperature(city);
+
   return false;
 };
