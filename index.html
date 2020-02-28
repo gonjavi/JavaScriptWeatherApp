@@ -17,6 +17,7 @@
       <div class="col-4">
         <form>
           <h3>Type the City to Get Temperature</h3>
+          <h5 id="notice" class="text-danger"></h5>
           <div class="form-group">
             <label for="city">City</label>
             <input type="text" class="form-control" id="city" placeholder="City">
@@ -24,11 +25,25 @@
           <button type="submit" class="btn btn-warning" id="check">Check</button>
         </form>
         <table id="titlediv"></table>
-        <table class=table m-4"" id="table">
+        <table class="table m-4" id="table">
+          <thead>
+            <tr>
+              <th>City</th>
+              <th class="text-center">Celsius</th>
+              <th class="text-center">Fahrenheit</th>
+            </tr>
+            <tbody>
+              <tr>
+                <td id="one"></td>
+                <td class="text-center" id="two"></td>
+                <td class="text-center" id="three"></td>
+              </tr>
+            </tbody>
+          </thead>
         </table>
       </div>
     </main>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
   </body>
 </html>
