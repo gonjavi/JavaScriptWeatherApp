@@ -6,20 +6,19 @@ async function getTemperature(city) {
   const apiKey = process.env.API_KEY;
   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`, { mode: 'cors' });
   const weatherInfo = await response.json();
-  if (weatherInfo.name === undefined) {
-    notice.innerHTML = 'Please check the spelling of the city:\n';
-    setTimeout(() => {
-      document.location.reload();
-    }, 4000);
-  }
-  document.getElementById('one').innerHTML = `${weatherInfo.name}`;
-  document.getElementById('two').innerHTML = `${Math.floor(weatherInfo.main.temp - (273.15))}`;
-  document.getElementById('three').innerHTML = `${Math.floor(((weatherInfo.main.temp - (273.15)) * (1.8)) + 32)}`;
-  return false;
+  const object = [];
+  object.push(weatherInfo.name);
+  object.push(Math.floor(weatherInfo.main.temp - (273.15)));
+  object.push(Math.floor(((weatherInfo.main.temp - (273.15)) * (1.8)) + 32));
+  return object;
 }
+
 
 document.getElementById('check').onclick = () => {
   const city = document.getElementById('city').value;
+  let name;
+  let temp1;
+  let temp2;
   let ok = true;
   if (city === '') {
     ok = false;
@@ -36,7 +35,20 @@ document.getElementById('check').onclick = () => {
   }
   titlediv.appendChild(title);
 
-  getTemperature(city);
+  const object = getTemperature(city);
+  object.then((result) => {
+    // destructuring
+    [name, temp1, temp2] = result;
+    document.getElementById('one').innerHTML = `${name}`;
+    document.getElementById('two').innerHTML = `${temp1}`;
+    document.getElementById('three').innerHTML = `${temp2}`;
+  })
+    .catch(() => {
+      notice.innerHTML = 'Please check the spelling of the city:\n';
+      setTimeout(() => {
+        document.location.reload();
+      }, 3000);
+    });
 
   return false;
 };
