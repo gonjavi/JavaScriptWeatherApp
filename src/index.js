@@ -73,7 +73,7 @@ document.getElementById('check').onclick = () => {
   return false;
 };
 
-let x = 1;
+let x = 0;
 document.getElementById('toggle').onclick = () => {
   if (x === 0) {
     celsius.style.visibility = 'hidden';

@@ -20,11 +20,6 @@
   "import/resolver": {
     "node": {
       "extensions": [".js", ".jsx", ".ts", ".tsx", "css"]
-    },
-    "import/resolver": {
-      "webpack": {
-        "config": "webpack/config/default.js"
-      }
     }
   }
 }
