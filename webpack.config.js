@@ -1,5 +1,5 @@
 const path = require('path');
-// eslint-disable-next-line no-unresolved
+/* eslint-disable-next-line no-unresolved */
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
