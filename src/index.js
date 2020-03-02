@@ -1,6 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const notice = document.getElementById('notice');
+const celsius = document.getElementById('c1');
+const fahrenheit = document.getElementById('f1');
+celsius.style.visibility = 'visible';
+fahrenheit.style.visibility = 'hidden';
+document.getElementById('two').style.visibility = 'visible';
+document.getElementById('three').style.visibility = 'hidden';
+document.getElementById('toggle').style.visibility = 'hidden';
+
 
 async function getTemperature(city) {
   const apiKey = process.env.API_KEY;
@@ -28,6 +36,8 @@ document.getElementById('check').onclick = () => {
   let name;
   let temp1;
   let temp2;
+  document.getElementById('toggle').style.visibility = 'visible';
+  document.getElementById('toggle').innerHTML = 'Fahrenheit';
   let ok = true;
   if (city === '') {
     ok = false;
@@ -61,4 +71,23 @@ document.getElementById('check').onclick = () => {
     });
 
   return false;
+};
+
+let x = 1;
+document.getElementById('toggle').onclick = () => {
+  if (x === 0) {
+    celsius.style.visibility = 'hidden';
+    document.getElementById('two').style.visibility = 'hidden';
+    fahrenheit.style.visibility = 'visible';
+    document.getElementById('three').style.visibility = 'visible';
+    document.getElementById('toggle').innerHTML = 'Celsius';
+    x = 1;
+  } else if (x === 1) {
+    celsius.style.visibility = 'visible';
+    document.getElementById('two').style.visibility = 'visible';
+    fahrenheit.style.visibility = 'hidden';
+    document.getElementById('three').style.visibility = 'hidden';
+    document.getElementById('toggle').innerHTML = 'Farhrenheit';
+    x = 0;
+  }
 };
