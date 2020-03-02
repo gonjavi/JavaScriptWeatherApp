@@ -16,11 +16,11 @@
   "eol-last": "off",
   "arrow-parens": "off"
   },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
+"settings": {
+  "import/resolver": {
+    "node": {
+      "extensions": [".js", ".jsx", ".ts", ".tsx", "css"]
     }
   }
+}
 }
