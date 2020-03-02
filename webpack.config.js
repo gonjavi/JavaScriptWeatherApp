@@ -11,15 +11,15 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
-    ]
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
   node: {
-    fs: 'empty'
+    fs: 'empty',
   },
   performance: { hints: false },
   plugins: [
-    new Dotenv()
+    new Dotenv(),
   ],
 };
