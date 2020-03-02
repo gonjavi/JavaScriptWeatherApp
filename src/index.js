@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const notice = document.getElementById('notice');
 const celsius = document.getElementById('c1');
