@@ -1,34 +1,36 @@
 # JavaScript Weather App
 
-> This is a weather forecast site using a weather API, that idea is to search for a specific location and toggle displaying the data in Fahrenheit or Celsius. .
+> This is a weather forecast site using the weather API Open Weather Map, the idea is to search for a specific location displaying the data in Fahrenheit or Celsius. .
 
-![screenshot](./app_screenshot.png)
+![screenshot](./weather.png)
 
 
 
 ## Built With
 
-- JavaScript 
+- HTML5
+- JavaScript
+- Bootstrap
+- Visual Code
 
 ## Live Demo
 
 [Live Demo Link](https://dontforget.com)
 
 
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 npm 6.13.14
 
 ### Setup
+ 
+- Run on the command line: $npm run watch
+- Click on: open with live server in Visual code or click on go live
+- Once the browser is opened, click on dist folder and it will be ready
 
-### Install
+
 
 ### Usage
 
-### Deployment
 
 
 
@@ -45,17 +47,11 @@ npm 6.13.14
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
