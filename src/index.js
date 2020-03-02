@@ -13,6 +13,15 @@ async function getTemperature(city) {
   return object;
 }
 
+function setBackground(temp1) {
+  if (temp1 < 10) {
+    document.body.style.background = '#E7ECEF';
+  } else if (temp1 >= 10 && temp1 <= 20) {
+    document.body.style.background = '#AED3FE';
+  } else if (temp1 > 20) {
+    document.body.style.background = '#EFEA6A';
+  }
+}
 
 document.getElementById('check').onclick = () => {
   const city = document.getElementById('city').value;
@@ -39,6 +48,7 @@ document.getElementById('check').onclick = () => {
   object.then((result) => {
     // destructuring
     [name, temp1, temp2] = result;
+    setBackground(temp1);
     document.getElementById('one').innerHTML = `${name}`;
     document.getElementById('two').innerHTML = `${temp1}`;
     document.getElementById('three').innerHTML = `${temp2}`;
