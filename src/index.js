@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unresolved
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const notice = document.getElementById('notice');
