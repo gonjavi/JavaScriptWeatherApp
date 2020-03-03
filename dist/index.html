@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <meta name="author" content="Gonzalo Javier Mancilla">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+  <body>
+    <nav class="navbar navbar-light bg-dark">
+      <a class="navbar-brand" href="#">
+       
+       <h3 class="text-warning"> Weather App</h3>
+      </a>
+    </nav>
+    <main class="row m-4" id="main">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <form>
+          <h3>Type the City to Get The Temperature</h3>
+          <h5 id="notice" class="text-danger"></h5>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" placeholder="City">
+          </div>
+          <button type="submit" class="btn btn-warning" id="check">Check</button>
+        </form>
+        <table id="titlediv"></table>
+        <table class="table m-4" id="table">
+          <thead>
+            <tr>
+              <th>City</th>
+              <th class="text-center" id="c1">Celsius</th>
+              <th class="text-center" id="f1">Fahrenheit</th>
+            </tr>
+            <tbody>
+              <tr>
+                <td id="one"></td>
+                <td class="text-center" id="two"></td>
+                <td class="text-center" id="three"></td>
+              </tr>
+            </tbody>
+          </thead>
+        
+        </table>
+        <button type="submit" class="btn btn-warning" id="toggle"></button>
+      </div>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+  </body>
+</html>
