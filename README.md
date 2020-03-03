@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://dontforget.com)
+[Live Demo Link](https://gonjavi.github.io/JavaScriptWeatherApp/)
 
 
 ### Prerequisites
