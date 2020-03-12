@@ -23,17 +23,10 @@ npm 6.13.14
 
 ### Setup
 
- - Run $npm install to install all dependencies from a package.json file
+ - Run $npm install   -to install all dependencies from a package.json file
 - Run on the command line: $npm run watch
 - Click on: open with live server in Visual code or click on go live
 - Once the browser is opened, click on dist folder and it will be ready
-
-
-
-
-### Usage
-
-
 
 
 ## Author
