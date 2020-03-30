@@ -36,7 +36,13 @@ npm 6.13.14
 - Github: [@gonjavi](https://github.com/gonjavi)
 - Linkedin: [@g-javier-mancilla](https://www.linkedin.com/in/g-javier-mancilla-a686a9178/)
 
-
+## Future Updates/Improvements
+Add the following characteristics:
+- Minimun temperature
+- Maximun temperature
+- Wind speed
+- Pressure 
+- Humidity
 
 ## 🤝 Contributing
 
