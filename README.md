@@ -33,8 +33,8 @@ npm 6.13.14
 
 👤 **Gonza Javier Mancilla**
 
-- Github: [@github/gonjavi](https://github.com/gonjavi)
-- Linkedin: [linkedin](https://www.linkedin.com/in/g-javier-mancilla-a686a9178/)
+- Github: [@gonjavi](https://github.com/gonjavi)
+- Linkedin: [@g-javier-mancilla](https://www.linkedin.com/in/g-javier-mancilla-a686a9178/)
 
 
 
