@@ -1,6 +1,6 @@
 # JavaScript Weather App
 
-> This is a weather forecast site using the weather API Open Weather Map, the idea is to search for a specific location displaying the data in Fahrenheit or Celsius. .
+> This is a weather forecast site built using the Open Weather Map API. The idea is to search for a specific location using the app, which will then display the data in Fahrenheit or Celsius.
 
 ![screenshot](./weather.png)
 
