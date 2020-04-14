@@ -38,8 +38,8 @@ npm 6.13.14
 
 ## Future Updates/Improvements
 Add the following characteristics:
-- Minimun temperature
-- Maximun temperature
+- Minimum temperature
+- Maximum temperature
 - Wind speed
 - Pressure 
 - Humidity
